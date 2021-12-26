@@ -18,7 +18,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initEscanear() {
-        IntentIntegrator(this).initiateScan()
+       val integrator = IntentIntegrator(this)//.initiateScan()
+       integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)//en lugar de elegir solo qr agregamos que pueda leer todosd los codigos
+        integrator.setPrompt("¡Escanea Cualquier Codigo!")//añade un mensaje en la parte inferior
+        integrator.setBeepEnabled(true)//genera un sonido al escanear algún codigo
+        integrator.setTorchEnabled(true)//activa el flash al escanear
+        integrator.initiateScan()//inicia el escaneo de codigos
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
