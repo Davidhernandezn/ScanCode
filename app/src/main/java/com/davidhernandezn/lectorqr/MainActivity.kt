@@ -15,10 +15,10 @@ import com.davidhernandezn.lectorqr.databinding.ActivityMainBinding
 import com.google.zxing.integration.android.IntentIntegrator
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
+        Thread.sleep(2000)
+        setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this, "Buscando... ${result.contents}", Toast.LENGTH_SHORT).show()
                 //var url = {result.contents}
-                var mywebview = findViewById<WebView>(R.id.webview)
+               var mywebview = findViewById<WebView>(R.id.webview)
                 mywebview.webChromeClient = object : WebChromeClient(){
 
                 }
@@ -61,5 +61,15 @@ class MainActivity : AppCompatActivity() {
         }else{
             super.onActivityResult(requestCode, resultCode, data)
         }
+    }
+
+    override fun onBackPressed() {
+        var mywebview = findViewById<WebView>(R.id.webview)
+        if(mywebview.canGoBack()){
+            mywebview.goBack()
+        }else{
+            super.onBackPressed()
+        }
+
     }
 }
