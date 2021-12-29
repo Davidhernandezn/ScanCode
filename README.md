@@ -1,5 +1,5 @@
 # ScanCode
-![https://drive.google.com/file/d/1rbDcaTeM7RYwatI4sZH8tjrmxq51JXrG/view](https://www.davidhernandezn.com/wp-content/uploads/2021/12/Banner-Scancode.png)
+![https://drive.google.com/file/d/1rbDcaTeM7RYwatI4sZH8tjrmxq51JXrG/view](https://www.davidhernandezn.com/wp-content/uploads/2021/12/Azul-Blanco-Arquitecto-Banner-LinkedIn.png)
 ## Aplicación Android ScanCode
 ### Escanea cualquier código Implementación de la [libreria Zxing](https://github.com/journeyapps/zxing-android-embedded). Te devuelve la información mediante un Toast o por su defecto te muestra el toast y te abre la url.
 #### * ⬇️[Descarga y Prueba la App](https://drive.google.com/file/d/1rbDcaTeM7RYwatI4sZH8tjrmxq51JXrG/view)
